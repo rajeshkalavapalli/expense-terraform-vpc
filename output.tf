@@ -10,15 +10,15 @@ output "vpc_id" {
 
 
 output "public_subnet_ids" {
-  value = aws.public_subnet_ids[*].id
+  value = aws_subnet.public[*].id
 }
 
 output "private_subnet_ids" {
-  value = aws.private_subnet_ids[*].id
+  value = aws_subnet.private[*].id
 }
 
 output "database_subnet_ids" {
-  value = aws.database_subnet_ids[*].id
+  value = aws_subnet.database[*].id
 }
 
 output "database_subnet_group_id" {
